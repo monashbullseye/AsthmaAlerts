@@ -472,7 +472,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .fh5co-light-grey {
-  background: #fafafa;
+  background: #ffffff;   /*Changes to the background*/
 }
 
 #fh5co-about,
@@ -1476,7 +1476,7 @@ input[type="text"] {
 }
 
 .bgFirstWidget {
-    background-image:url(/myTemplate/images/weatherbac3.jpg);
+    /*background-image:url(/myTemplate/images/weatherbac3.jpg);*/ /*Changes 2*/
     /*height:50px;*/
     width:350px;
     margin-left: -28px;
@@ -1489,7 +1489,7 @@ input[type="text"] {
     margin-left: 110px;
     width:150px;
     display: block;
-    color:white;
+    color:black;
 }
 
 .wplace{
@@ -1497,7 +1497,7 @@ input[type="text"] {
     position: absolute;
     margin-top: -10px;
     margin-left: 30px;
-    color:white;
+    color:black;
 }
 
 .wimage{
@@ -1506,31 +1506,28 @@ input[type="text"] {
     margin-top:30px;
     margin-left: 50px;
     width:10px;
-    color:white;
+    color:black;
 }
 
 .walert{
-
-
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 110px;
-    width:150px;
-    display: block;
+display: block;
     font-size:xx-large;
-    color:white;
+    color:black;
     font-weight:bold;
+    text-align: center;
 }
 
 .wtemp{
 
+    text-align: center;
     /*margin-top:30px;*/
     
-    width:360px;
+    /*width:360px;
     margin-left: 110px;
-    margin-bottom: 20px;
+    margin-bottom: 20px;*/
     display: block;
-    color:white;
+    color:black;
+   
 }
 
 .alertInfo{
@@ -1543,6 +1540,20 @@ input[type="text"] {
 .alertImage{
     margin-left: 400px;
 }
+
+.LoggingTime{
+    position: relative;
+    width: 100%;
+    height: 800px;
+    padding-top:-10%;
+    text-align: center;
+    color:blue;
+    font-weight:bold;
+    font-size:24px;
+   
+}
+
+
 
 .wlink
 {
@@ -1565,5 +1576,237 @@ a.one:visited {color:#0000ff;}
 a.one:hover {color:#ffcc00;}
 
 
+/*div for Alters*/
+.temp{
+  
+   text-align: center;
+   
+}
 
+.temp p{
+   margin: 0;
+    
+}
+
+.PostalCodeHeader{
+    text-align: center;
+}
+
+/*Chnages for font*/
+.Heading1{
+    text-align: center;
+    color: #000;
+  font-family: "Source Sans Pro", sans-serif;
+  /*font-weight: 2000;*/
+  font-size: 2.1em;
+  
+    /*clear: both;*/
+    /*display: inline-block;*/
+    /*overflow: hidden;*/
+    white-space: nowrap;
+   
+}
+
+.paddingHeader {
+
+    padding: 1.5em;
+}
+
+/*LOGIN*/
+.LoginControl{
+    
+    position:relative;
+    align-content:center;
+    margin-left:40%;    
+}
+
+/*WIZARD DIV*/
+.WizardDiv{
+    position:absolute;
+    padding-left: 40%;
+    /*padding-right:40%;*/
+    padding-top: -30px;
+    width:100%;
+    text-align:center;
+    font-size:16px;
+    font-weight:normal;
+    color:black;
+}
+
+/*.WizStepPrevBtn{
+    padding:4px 7px 12px 14px;
+    right:50px;
+}*/
+
+/*WIZARD TAB*/
+.stepNotCompleted
+{
+    background-color: rgb(153,153,153);
+    width: 40px;
+    border: 1px solid rgb(153,153,153);
+    margin-right: 5px;
+    color: White;
+    font-family: Arial;
+    font-size: 16px;
+    text-align: center;
+}
+
+.stepCompleted
+{
+    background-color: #4d4d4d;
+    width: 40px;
+    border: 1px solid #4d4d4d;
+    color: White;
+    font-family: Arial;
+    font-size: 16px;
+    text-align: center;
+}
+
+.stepCurrent
+{
+    background-color: #e01122;
+    width: 40px;
+    border: 1px solid #e01122;
+    color: White;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.stepBreak
+{
+    width: 3px;
+    background-color: Transparent;
+}
+
+.wizardProgress
+{
+    padding-right: 8px;
+    padding-top: -30px;
+    font-family: Arial;
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.wizardTitle {
+    padding-top: 100px;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    color: dodgerblue;
+    vertical-align: middle;
+
+}/*Changes for alignment Pratham (23/04/2017)*/
+
+.wizardSpace{
+    width:1px;
+    padding-left:0px;
+}
+/*Changes for alignment Pratham (23/04/2017)*/
+.LoginContainer{
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  background: #fff;
+  height: 35em;
+}
+
+.contentpadding
+{
+    padding-bottom: 30em;
+}
+
+.buttonAlignCentre
+{
+     text-align: center;
+    
+    /*border: 3px solid green;*/
+    
+}
+/*Changes for alignment ends*/
 /*# sourceMappingURL=style.css.map */
+
+
+.calendarWrapper{
+    background-color:#4CCAEF;
+    padding:10px;
+    display:inline-block;
+}
+
+.myCalendar {  
+    background-color: #f2f2f2;  
+    width: 156px;  
+    border:none !important;
+}  
+    .myCalendar a {  
+    text-decoration: none;  }  
+.myCalendar .myCalendarTitle {  
+    font-weight: bold;  
+    height:40px;line-height:40px;
+    background-color:#4CCAEF;
+    color:#ffffff;
+    border:none !important;
+}  
+.myCalendar th.myCalendarDayHeader  
+{
+    height:25px;
+
+}
+.myCalendar tr{  
+    border-bottom: solid 1px #ddd;
+} 
+
+.myCalendar table tr {
+    border-bottom: none !important;    
+}
+.myCalendar tr:last-child td{  
+    border-bottom: none;
+}
+.myCalendar tr td.myCalendarDay, .myCalendar tr th.myCalendarDayHeader{  
+    border-right: solid 1px #ddd;
+}
+.myCalendar tr td:last-child.myCalendarDay, .myCalendar tr th:last-child.myCalendarDayHeader {  
+    border-right: none;
+}
+
+  .myCalendar td.myCalendarDay:nth-child(7) a{color:#c52e2e !important;}
+.myCalendar .myCalendarNextPrev {  
+    text-align: center;  
+}  
+
+.myCalendar .myCalendarNextPrev a  {font-size:1px;}
+.myCalendar .myCalendarNextPrev:nth-child(1) a{color:#4CCAEF!important;background:url("prevMonth.png") no-repeat center center;}
+.myCalendar .myCalendarNextPrev:nth-child(1) a:hover,.myCalendar .myCalendarNextPrev:nth-child(3) a:hover{background-color:transparent;}
+.myCalendar .myCalendarNextPrev:nth-child(3) a{color:#4CCAEF!important;background:url("nextMonth.png") no-repeat center center;}
+.myCalendar td.myCalendarSelector a {  
+    background-color: #25bae5;  
+}  
+
+.myCalendar .myCalendarDayHeader a,
+.myCalendar .myCalendarDay a,   
+.myCalendar .myCalendarSelector a,  
+.myCalendar .myCalendarNextPrev a {  
+    display: block;  
+    line-height: 20px;  
+}  
+.myCalendar .myCalendarToday {  
+    background-color: #f2f2f2; 
+   -webkit-box-shadow: 1px 1px 8px 1px #8f8f8f;
+        box-shadow: 1px 1px 8px 1px #8f8f8f;
+        display:inline-block;
+    width:22px !important;
+    height:19px !important;
+border:2px solid #f2f2f2;
+margin-left:-1px;
+margin-top:-1px;
+position:relative;}
+.myCalendar .myCalendarToday a{color:#25bae5 !important; font-weight:bold;}
+.myCalendar .myCalendarToday a:after{content:"TODAY"; color:#000; font-size:0.5em;display:inline-block;pointer-events:none; 
+width:100%; float:left;}
+.myCalendar .myCalendarDay a:hover,   
+.myCalendar .myCalendarSelector a:hover {  
+    background-color: #25bae5;  
+}

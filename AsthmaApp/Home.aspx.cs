@@ -15,8 +15,36 @@ namespace AsthmaApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            lblTmpMX.Visible = false;
+            //lblHumid.Visible = false;
+            lblSevr.Visible = false;
+            lblMx.Visible = false;
+            lblMi.Visible = false;
+            lblNight.Visible = false;
+            ClickMore.Visible = false;
 
         }
+
+       
+        
+            //Changes for alignment Pratham (23/04/2017)        
+
+            protected void Check_PostCode()
+            {
+            try
+            {
+                AccessDataSource12.SelectCommand = "SELECT * FROM PostcodeDetails WHERE suburb='MELBOURNE' and postcode= '" + txtCity + "'";
+                AccessDataSource12.Select(DataSourceSelectArguments.Empty);
+            }
+            catch (Exception ex)
+            {
+                showExceptionMsgForPostCode();
+            }
+        }
+            //Changes for alignment ends
+
+
+
 
         protected void btn_getWeather_Click(object sender, EventArgs e)
         {
@@ -48,6 +76,7 @@ namespace AsthmaApp
 
                     WeatherInfo weatherInfo = (new JavaScriptSerializer()).Deserialize<WeatherInfo>(json);
                     imgWeatherIcon.ImageUrl = string.Format("http://openweathermap.org/img/w/{0}.png", weatherInfo.List[0].Weather[0].Icon);
+                    lblCity_Country.Text = ""; /*changes 5*/
                     lblCity_Country.Text = weatherInfo.City.Name + "," + weatherInfo.City.Country;
                     imgCountryFlag.ImageUrl = string.Format("http://openweathermap.org/images/flags/{0}.png", weatherInfo.City.Country.ToLower());
                     lblDescription.Text = weatherInfo.List[0].Weather[0].Description;
@@ -87,23 +116,70 @@ namespace AsthmaApp
                         severityLevel = severityLevel + 2;
                     else
                         severityLevel = severityLevel + 3;
+                    //Changes made after alignment (Prathamesh 19/04/2017)
+                    //if (severityLevel == 1)
 
+                    //    lblDayTempAlert.Text = "Very Low";
+                    //else if (severityLevel == 2)
+                    //    lblDayTempAlert.Text = "Low";
+                    //else if (severityLevel == 3)
+                    //    lblDayTempAlert.Text = "Low to Moderate";
+                    //else if (severityLevel == 4)
+                    //    lblDayTempAlert.Text = "Moderate";
+                    //else if (severityLevel == 5)
+                    //    lblDayTempAlert.Text = "High";
+                    //else if (severityLevel == 6)
+                    //    lblDayTempAlert.Text = "Very High";
+                    //else if (severityLevel == 7)
+                    //    lblDayTempAlert.Text = "Critical";
+                    
+                    //Code added to change the colour according to severity (Prathamesh) 19/04/2017
                     if (severityLevel == 1)
+                    {
                         lblDayTempAlert.Text = "Very Low";
+                        lblDayTempAlert.ForeColor = System.Drawing.Color.GreenYellow;
+                        lblDayTempAlert.BorderColor = System.Drawing.Color.Black;
+                    }
                     else if (severityLevel == 2)
+                    {
                         lblDayTempAlert.Text = "Low";
+                        lblDayTempAlert.ForeColor = System.Drawing.Color.Green;
+                        lblDayTempAlert.BorderColor = System.Drawing.Color.Black;
+                    }
                     else if (severityLevel == 3)
+                    {
                         lblDayTempAlert.Text = "Low to Moderate";
+                        lblDayTempAlert.ForeColor = System.Drawing.Color.Yellow;
+                        lblDayTempAlert.BorderColor = System.Drawing.Color.Black;
+                    }
                     else if (severityLevel == 4)
+                    {
                         lblDayTempAlert.Text = "Moderate";
+                        lblDayTempAlert.ForeColor = System.Drawing.Color.Orange;
+                        lblDayTempAlert.BorderColor = System.Drawing.Color.Black;
+                    }
                     else if (severityLevel == 5)
+                    {
                         lblDayTempAlert.Text = "High";
+                        lblDayTempAlert.ForeColor = System.Drawing.Color.OrangeRed;
+                        lblDayTempAlert.BorderColor = System.Drawing.Color.Black;
+                    }
                     else if (severityLevel == 6)
+                    {
                         lblDayTempAlert.Text = "Very High";
-                    else if (severityLevel == 7)
-                        lblDayTempAlert.Text = "Critical";
+                        lblDayTempAlert.ForeColor = System.Drawing.Color.Red;
+                        lblDayTempAlert.BorderColor = System.Drawing.Color.HotPink;
 
-                    lblHumidity.Text = weatherInfo.List[0].Humidity.ToString();
+
+                    }
+                    else if (severityLevel == 7)
+                    {
+                        lblDayTempAlert.Text = "Critical";
+                        lblDayTempAlert.ForeColor = System.Drawing.Color.DarkRed;
+                        lblDayTempAlert.BorderColor = System.Drawing.Color.Black;
+
+                    }
+                    //lblHumidity.Text = weatherInfo.List[0].Humidity.ToString();
                     ////Day Temp Alert
                     //Boolean dayTempAlert = DayTemperatureAlert(lblTempDay.Text);
                     //if (dayTempAlert == true)
@@ -132,7 +208,16 @@ namespace AsthmaApp
                     //}
 
                     tblWeather.Visible = true;
-
+                    lblTmpMX.Visible = true;
+                    //lblHumid.Visible = true;
+                    lblSevr.Visible = true;
+                    lblMx.Visible = true;
+                    lblMi.Visible = true;
+                    lblNight.Visible = true;
+                    ClickMore.Visible = true;
+                    //Changes for alignment Pratham (23/04/2017)  
+                    //Check_PostCode();
+                    //Changes end
                 }
             }
 
@@ -150,6 +235,20 @@ namespace AsthmaApp
             clearFields();
         }
 
+        //Changes for alignment Pratham (23/04/2017)  
+        protected void showExceptionMsgForPostCode()
+        {
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Please enter a valid Postcode for Melbourne')", true);
+            clearFields();
+        }
+        //changes end
+
+        protected void showExceptionMsgForInvalidPostcode() /*Change 3*/
+        {
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Please enter a valid postal code.')", true);
+            clearFields();
+        }
+
         //This function is for clearing all label fields
         protected void clearFields()
         {
@@ -161,7 +260,7 @@ namespace AsthmaApp
             lblTempMax.Text = "";
             lblTempDay.Text = "";
             lblTempNight.Text = "";
-            lblHumidity.Text = "";
+            //lblHumidity.Text = "";
             lblDayTempAlert.Text = "";
             lblNightTempAlert.Text = "";
         }

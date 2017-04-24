@@ -13,6 +13,24 @@ namespace AsthmaApp {
     public partial class Home {
         
         /// <summary>
+        /// AccessDataSource12 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.AccessDataSource AccessDataSource12;
+        
+        /// <summary>
+        /// SiteMapDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapDataSource1;
+        
+        /// <summary>
         /// txtCity control.
         /// </summary>
         /// <remarks>
@@ -29,24 +47,6 @@ namespace AsthmaApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_getWeather;
-        
-        /// <summary>
-        /// lblException control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblException;
-        
-        /// <summary>
-        /// tblWeather control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTable tblWeather;
         
         /// <summary>
         /// lblCity_Country control.
@@ -76,15 +76,6 @@ namespace AsthmaApp {
         protected global::System.Web.UI.WebControls.Label lblDescription;
         
         /// <summary>
-        /// lblHumidity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHumidity;
-        
-        /// <summary>
         /// imgWeatherIcon control.
         /// </summary>
         /// <remarks>
@@ -92,6 +83,15 @@ namespace AsthmaApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgWeatherIcon;
+        
+        /// <summary>
+        /// lblSevr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSevr;
         
         /// <summary>
         /// lblDayTempAlert control.
@@ -112,6 +112,15 @@ namespace AsthmaApp {
         protected global::System.Web.UI.WebControls.Label lblNightTempAlert;
         
         /// <summary>
+        /// lblTmpMX control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTmpMX;
+        
+        /// <summary>
         /// lblTempMin control.
         /// </summary>
         /// <remarks>
@@ -119,6 +128,15 @@ namespace AsthmaApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblTempMin;
+        
+        /// <summary>
+        /// lblMx control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMx;
         
         /// <summary>
         /// lblTempMax control.
@@ -130,6 +148,15 @@ namespace AsthmaApp {
         protected global::System.Web.UI.WebControls.Label lblTempMax;
         
         /// <summary>
+        /// lblMi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMi;
+        
+        /// <summary>
         /// lblTempDay control.
         /// </summary>
         /// <remarks>
@@ -139,6 +166,15 @@ namespace AsthmaApp {
         protected global::System.Web.UI.WebControls.Label lblTempDay;
         
         /// <summary>
+        /// lblNight control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNight;
+        
+        /// <summary>
         /// lblTempNight control.
         /// </summary>
         /// <remarks>
@@ -146,5 +182,41 @@ namespace AsthmaApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblTempNight;
+        
+        /// <summary>
+        /// ClickMore control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ClickMore;
+        
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
+        
+        /// <summary>
+        /// lblException control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblException;
+        
+        /// <summary>
+        /// tblWeather control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTable tblWeather;
     }
 }
